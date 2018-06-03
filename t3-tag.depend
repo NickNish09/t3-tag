@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1528055700 source:/home/nicholas/Documentos/UNB/Gráficos/t3-tag/t3-tag/main.cpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	<vector>
+	<stack>
+	<sstream>
+	<list>
+	<iterator>
+	"Grafo.h"
+	<Professor.h>
+
+1528049024 /home/nicholas/Documentos/UNB/Gráficos/t3-tag/t3-tag/include/grafo.h
+	<vector>
+	<list>
+
+1528055248 /home/nicholas/Documentos/UNB/Gráficos/t3-tag/t3-tag/include/Professor.h
+	<sstream>
+	<string>
+	<iostream>
+	<fstream>
+
+1528055280 source:/home/nicholas/Documentos/UNB/Gráficos/t3-tag/t3-tag/src/Professor.cpp
+	"Professor.h"
+
+1528054389 source:/home/nicholas/Documentos/UNB/Gráficos/t3-tag/t3-tag/src/Grafo.cpp
+	"Grafo.h"
+
+1528055783 /home/nicholas/Documentos/UNB/Gráficos/t3-tag/t3-tag/include/Grafo.h
+	<vector>
+	<list>
+	<iostream>
+	<stack>
+
