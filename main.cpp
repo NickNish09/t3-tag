@@ -53,7 +53,7 @@ void initGraphicVisualization() {
 
 
 int main() {
-
-  Professor::readProfessors();
+  FILE * file;
+  Professor::readProfessors(file);
   return 0;
 }

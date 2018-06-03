@@ -8,7 +8,7 @@
 
 using namespace std;
 
-ifstream infile("entradaProj3TAG.txt");
+//ifstream infile("entradaProj3TAG.txt");
 
 /**
  * @brief Classe responsável por modelar a entidade Professor, contendo cada objeto
@@ -49,7 +49,7 @@ class Professor
 
     void setEscolasPretendidas (int escolas_pretendidas[5]);
 
-    static void readProfessors ();
+    static void readProfessors (FILE * file);
 
 
   protected:

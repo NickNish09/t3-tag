@@ -27,14 +27,18 @@ void Professor::setEscolasPretendidas(int escolas_pretendidas[5])
   }
 }
 
-void Professor::readProfessors()
+void Professor::readProfessors(FILE * file)
 {
-  while (getline(infile, line))
-  {
-      istringstream iss(line);
-      int a, b;
-      if (!(iss >> a >> b)) { break; } // error
 
-      // process pair (a,b)
+  char * line = NULL;
+  size_t len = 0;
+  ssize_t read;
+
+  file = fopen("entradaProj3TAG.txt", "r");
+  if (file){
+    while ((read = getline(&line, &len, file)) != -1) {
+      printf("Retrieved line of length %zu :\n", read);
+      printf("%s", line);
+    }
   }
 }
