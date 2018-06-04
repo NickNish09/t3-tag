@@ -35,11 +35,15 @@ void Grafo::makeAndPrintEmparelhamento(Professor professoress[100], Escola escol
           aux = professores[i].getEscolasPretendidas();
           //printf("olll: %d\n",aux[j]);
           //printf("size: %d",sizeof(professores));
+
           if(escolas[aux[j]].getLacrou()){
 
           }else{
-            escolas[aux[j]].setCarro(professores[i].getNumeroProfessor());
-            professores[i].setAlocado(true);
+            if(escolas[aux[j]].getHabilitacoesPretendidas() == professores[i].getNumeroHabilitacoes()){
+              escolas[aux[j]].setCarro(professores[i].getNumeroProfessor());
+              professores[i].setAlocado(true);
+              professores[escolas[aux[j]].getCarro1()].setAlocado(false);
+            }
           }
         }
       }
