@@ -8,6 +8,7 @@
 #include <iterator>
 #include <Grafo.h>
 #include <Professor.h>
+#include <Escola.h>
 
 #define NUMERO_ESCOLAS 5
 
@@ -53,7 +54,17 @@ void initGraphicVisualization() {
 
 
 int main() {
+  int i;
   FILE * file;
   Professor::readProfessors(file);
+  Escola::readEscolas(file);
+  for(i=0;i<100;i++){
+    printf("Numero do Professor: %d\nHabilitaçoes: %d\nPrimeira: %d\nSegunda: %d\nTerceira: %d\nQuarta: %d\nQuinta: %d\n",Professor::professores[i].getNumeroProfessor(),Professor::professores[i].getNumeroHabilitacoes(),Professor::professores[i].getEscolasPretendidas()[0],Professor::professores[i].getEscolasPretendidas()[1],Professor::professores[i].getEscolasPretendidas()[2],Professor::professores[i].getEscolasPretendidas()[3],Professor::professores[i].getEscolasPretendidas()[4]);
+  }
+
+  for(i=0;i<50;i++){
+    printf("Numero da Escola: %d\nHabilitacoes: %d\nVagas: %d\n",Escola::escolas[i].getNumeroEscola(),Escola::escolas[i].getHabilitacoesPretendidas(),Escola::escolas[i].getVagas());
+  }
+
   return 0;
 }

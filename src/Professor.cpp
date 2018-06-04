@@ -307,8 +307,5 @@ void Professor::readProfessors(FILE * file)
     Professor::professores[99-1].setEscolasPretendidas(arr99);
     Professor::professores[100-1].setEscolasPretendidas(arr100);
 
-    for(i=0;i<100;i++){
-      printf("Numero do Professor: %d\nHabilitaçoes: %d\nPrimeira: %d\nSegunda: %d\nTerceira: %d\nQuarta: %d\nQuinta: %d\n",Professor::professores[i].getNumeroProfessor(),Professor::professores[i].getNumeroHabilitacoes(),Professor::professores[i].getEscolasPretendidas()[0],Professor::professores[i].getEscolasPretendidas()[1],Professor::professores[i].getEscolasPretendidas()[2],Professor::professores[i].getEscolasPretendidas()[3],Professor::professores[i].getEscolasPretendidas()[4]);
-    }
   }
 }

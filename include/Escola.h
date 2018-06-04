@@ -47,7 +47,7 @@ class Escola
 
     static void readEscolas (FILE * file);
 
-    static list<Escola> escolas;
+    static Escola escolas[50];
   protected:
 
   private:

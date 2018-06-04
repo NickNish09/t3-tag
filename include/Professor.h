@@ -58,6 +58,8 @@ class Professor
 
     static void readProfessors (FILE * file);
 
+    static Professor professores[100];
+
   protected:
 
   private:
@@ -65,7 +67,6 @@ class Professor
     int escolas_pretendidas[5];
     int numero_professor;
 
-    static Professor professores[100];
 };
 
 #endif // PROFESSOR_H
