@@ -10,6 +10,47 @@ Grafo::~Grafo()
   //dtor
 }
 
+void Grafo::makeAndPrintEmparelhamento(Professor professoress[100], Escola escolass[50])
+{
+  int i,j;
+  int * aux;
+
+  Escola escolas[50];
+  Professor professores[100];
+
+  for(i=0;i<50;i++){
+    escolas[i] = Escola::escolas[i];
+  }
+
+  for(i=0;i<100;i++){
+    professores[i] = Professor::professores[i];
+  }
+
+  for(j=0;j<5;j++){
+    //while(!(Escola::tudoLacrado())){
+      for(i=0;i<100;i++){
+        if(professores[i].getAlocado()){
+
+        }else{
+          aux = professores[i].getEscolasPretendidas();
+          //printf("olll: %d\n",aux[j]);
+          //printf("size: %d",sizeof(professores));
+          if(escolas[aux[j]].getLacrou()){
+
+          }else{
+            escolas[aux[j]].setCarro(professores[i].getNumeroProfessor());
+            professores[i].setAlocado(true);
+          }
+        }
+      }
+    //}
+  }
+
+  for(j=0;j<50;j++){
+    printf("Escola %d: Professor: %d\n",escolas[j].getNumeroEscola(),escolas[j].getCarro1());
+  }
+}
+
 Grafo::Grafo(int v) {
   vertices = v;
   adj = new list<int>[v];

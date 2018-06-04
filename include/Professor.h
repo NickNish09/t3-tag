@@ -42,12 +42,20 @@ class Professor
       return escolas_pretendidas;
     }
 
+    bool getAlocado(){
+      return alocado;
+    }
+
     void setNumeroHabilitacoes (int numero_habilitacoes){
       this->numero_habilitacoes = numero_habilitacoes;
     }
 
     void setNumeroProfessor (int numero_professor){
       this->numero_professor = numero_professor;
+    }
+
+    void setAlocado (bool alocado){
+      this->alocado = alocado;
     }
 
     void setEscolasPretendidas (int escolas_pretendidas[5]);
@@ -66,6 +74,7 @@ class Professor
     int numero_habilitacoes;
     int escolas_pretendidas[5];
     int numero_professor;
+    bool alocado;
 
 };
 

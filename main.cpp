@@ -65,6 +65,8 @@ int main() {
   for(i=0;i<50;i++){
     printf("Numero da Escola: %d\nHabilitacoes: %d\nVagas: %d\n",Escola::escolas[i].getNumeroEscola(),Escola::escolas[i].getHabilitacoesPretendidas(),Escola::escolas[i].getVagas());
   }
+  printf("TAMANHO: %d\n",(sizeof(Escola::escolas)/sizeof(Escola)));
+  Grafo::makeAndPrintEmparelhamento(Professor::professores,Escola::escolas);
 
   return 0;
 }

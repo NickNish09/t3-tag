@@ -175,3 +175,13 @@ void Escola::readEscolas(FILE* file)
       Escola::escolas[ola].setNumeroEscola(ola+1);
     }
 }
+bool Escola::tudoLacrado()
+{
+  int i;
+  for(i=0;i<50;i++){
+    if(!(escolas[i].getLacrou())){
+      return false;
+    }
+  }
+  return true;
+}
