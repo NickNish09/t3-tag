@@ -10,6 +10,12 @@ Grafo::~Grafo()
   //dtor
 }
 
+/**
+ * @brief Função que faz o emparelhamento e printa na tela o emparelhamento
+ *        Melhorada para os professores, ja que eles visitam as escolas e se tiver vaga eles são alocados, até
+ *        terem um professor melhor tomando sua vaga
+ *
+ */
 void Grafo::makeAndPrintEmparelhamento(Professor professoress[100], Escola escolass[50])
 {
   int i,j;
@@ -37,12 +43,13 @@ void Grafo::makeAndPrintEmparelhamento(Professor professoress[100], Escola escol
           //printf("size: %d",sizeof(professores));
 
           if(escolas[aux[j]].getLacrou()){
-
+            //se ja tem melhor emparelhamento, não faz nada
           }else{
             if(escolas[aux[j]].getHabilitacoesPretendidas() == professores[i].getNumeroHabilitacoes()){
               escolas[aux[j]].setCarro(professores[i].getNumeroProfessor());
               professores[i].setAlocado(true);
               professores[escolas[aux[j]].getCarro1()].setAlocado(false);
+              escolas[aux[j]].setLacrou(true);
             }else{
               if(escolas[aux[j]].getCarro1() == 0){
                 int k=0;
@@ -51,6 +58,15 @@ void Grafo::makeAndPrintEmparelhamento(Professor professoress[100], Escola escol
                 }
                 escolas[aux[j]].setCarro(k);
                 professores[k].setAlocado(true);
+              }else{
+                if(escolas[aux[j]].getCarro2() == 0 && escolas[aux[j]].getVagas() > 1){//Se a segunda vaga nao estiver preenchida e tiver 2 vagas
+                  int q=0;
+                  while(professores[q].getAlocado()){
+                    q++;
+                  }
+                  escolas[aux[j]].setCarro2(q);
+                  professores[q].setAlocado(true);
+                }
               }
             }
           }
@@ -60,7 +76,11 @@ void Grafo::makeAndPrintEmparelhamento(Professor professoress[100], Escola escol
   }
 
   for(j=0;j<50;j++){
-    printf("Escola %d: Professor: %d\n",escolas[j].getNumeroEscola(),escolas[j].getCarro1());
+    if(escolas[j].getCarro2() != 0){
+      printf("Escola %d: Professor 1: %d | Professor 2: %d\n",escolas[j].getNumeroEscola(),escolas[j].getCarro1(),escolas[j].getCarro2());
+    }else{
+      printf("Escola %d: Professor 1: %d | Professor 2: -x-\n",escolas[j].getNumeroEscola(),escolas[j].getCarro1());
+    }
   }
 }
 

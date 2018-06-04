@@ -45,7 +45,7 @@ class Escola
     }
 
     int getCarro2(){
-      return carro;
+      return carro2;
     }
 
     void setNumeroEscola (int numero_escola){
@@ -68,6 +68,10 @@ class Escola
       this->carro = professor;
     }
 
+    void setCarro2(int professor){
+      this->carro2 = professor;
+    }
+
     static bool tudoLacrado();
 
     static void readEscolas (FILE * file);
@@ -80,6 +84,7 @@ class Escola
     int habilitacoes_pretendidas;
     int vagas;
     int carro;
+    int carro2;
     bool lacrou;
 };
 
