@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1528081562 source:/home/nicholas/Documentos/UNB/Gráficos/t3-tag/t3-tag/main.cpp
+1528127332 source:/home/nicholas/Documentos/UNB/Gráficos/t3-tag/t3-tag/main.cpp
 	<iostream>
 	<stdio.h>
 	<stdlib.h>
@@ -15,7 +15,7 @@
 	<vector>
 	<list>
 
-1528083035 /home/nicholas/Documentos/UNB/Gráficos/t3-tag/t3-tag/include/Professor.h
+1528128556 /home/nicholas/Documentos/UNB/Gráficos/t3-tag/t3-tag/include/Professor.h
 	<sstream>
 	<string>
 	<iostream>
@@ -24,7 +24,7 @@
 	<vector>
 	<regex>
 
-1528084931 source:/home/nicholas/Documentos/UNB/Gráficos/t3-tag/t3-tag/src/Professor.cpp
+1528094022 source:/home/nicholas/Documentos/UNB/Gráficos/t3-tag/t3-tag/src/Professor.cpp
 	"Professor.h"
 
 1528055709 source:/home/nicholas/Documentos/UNB/Gráficos/t3-tag/t3-tag/src/Grafo.cpp
