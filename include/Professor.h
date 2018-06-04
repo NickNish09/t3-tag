@@ -5,6 +5,9 @@
 #include <string>
 #include <iostream>
 #include <fstream>
+#include <list>
+#include <vector>
+#include <regex>
 
 using namespace std;
 
@@ -14,15 +17,15 @@ using namespace std;
  * @brief Classe responsável por modelar a entidade Professor, contendo cada objeto
  *        professor um numero de habilitações e as escolas preferidas em ordem
  *
- * Função que pega como argumento uma matriz de vértices e seus respectivos graus e
- * retorna os vértices ordenados de acordo com o grau dos mesmos.
+ * Um objeto da classe professor possui número do professor, número de habilitações do
+ * professor e um array de escolas pretendidas pelo professor em ordem descrescente de prioridade
  */
 
 class Professor
 {
   public:
     Professor();
-    Professor(int numero_professor, int numero_habilitacoes, int * escolas_pretendidas);
+    Professor(int numero_professor, int numero_habilitacoes, int escolas_pretendidas[5]);
     virtual ~Professor();
 
     static const int NUMERO_ESCOLAS = 5;
@@ -49,8 +52,11 @@ class Professor
 
     void setEscolasPretendidas (int escolas_pretendidas[5]);
 
-    static void readProfessors (FILE * file);
+    static void setProfessores (Professor professores[100]);
 
+    static Professor * getProfessores ();
+
+    static void readProfessors (FILE * file);
 
   protected:
 
@@ -58,6 +64,8 @@ class Professor
     int numero_habilitacoes;
     int escolas_pretendidas[5];
     int numero_professor;
+
+    static Professor professores[100];
 };
 
 #endif // PROFESSOR_H

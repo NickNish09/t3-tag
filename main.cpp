@@ -6,7 +6,7 @@
 #include <sstream>
 #include <list>
 #include <iterator>
-#include "Grafo.h"
+#include <Grafo.h>
 #include <Professor.h>
 
 #define NUMERO_ESCOLAS 5

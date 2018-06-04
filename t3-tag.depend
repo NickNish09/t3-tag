@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1528057645 source:/home/nicholas/Documentos/UNB/Gráficos/t3-tag/t3-tag/main.cpp
+1528081562 source:/home/nicholas/Documentos/UNB/Gráficos/t3-tag/t3-tag/main.cpp
 	<iostream>
 	<stdio.h>
 	<stdlib.h>
@@ -8,28 +8,41 @@
 	<sstream>
 	<list>
 	<iterator>
-	"Grafo.h"
+	<Grafo.h>
 	<Professor.h>
 
 1528049024 /home/nicholas/Documentos/UNB/Gráficos/t3-tag/t3-tag/include/grafo.h
 	<vector>
 	<list>
 
-1528057417 /home/nicholas/Documentos/UNB/Gráficos/t3-tag/t3-tag/include/Professor.h
+1528083035 /home/nicholas/Documentos/UNB/Gráficos/t3-tag/t3-tag/include/Professor.h
 	<sstream>
 	<string>
 	<iostream>
 	<fstream>
+	<list>
+	<vector>
+	<regex>
 
-1528057707 source:/home/nicholas/Documentos/UNB/Gráficos/t3-tag/t3-tag/src/Professor.cpp
+1528084555 source:/home/nicholas/Documentos/UNB/Gráficos/t3-tag/t3-tag/src/Professor.cpp
 	"Professor.h"
 
 1528055709 source:/home/nicholas/Documentos/UNB/Gráficos/t3-tag/t3-tag/src/Grafo.cpp
 	"Grafo.h"
 
-1528056852 /home/nicholas/Documentos/UNB/Gráficos/t3-tag/t3-tag/include/Grafo.h
+1528081544 /home/nicholas/Documentos/UNB/Gráficos/t3-tag/t3-tag/include/Grafo.h
 	<vector>
 	<list>
 	<iostream>
 	<stack>
+
+1528074744 source:/home/nicholas/Documentos/UNB/Gráficos/t3-tag/t3-tag/src/Escola.cpp
+	"Escola.h"
+
+1528075396 /home/nicholas/Documentos/UNB/Gráficos/t3-tag/t3-tag/include/Escola.h
+	<sstream>
+	<string>
+	<iostream>
+	<fstream>
+	<list>
 

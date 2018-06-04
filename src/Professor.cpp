@@ -2,6 +2,8 @@
 
 string line;
 
+Professor Professor::professores[100];
+
 Professor::Professor()
 {
     //ctor
@@ -27,18 +29,52 @@ void Professor::setEscolasPretendidas(int escolas_pretendidas[5])
   }
 }
 
+void Professor::setProfessores(Professor professores[100])
+{
+  int i;
+  for(i=0;i<100;i++){
+    Professor::professores[i] = professores[i];
+  }
+}
+
+Professor* Professor::getProfessores()
+{
+  return professores;
+}
+
+
 void Professor::readProfessors(FILE * file)
 {
 
   char * line = NULL;
   size_t len = 0;
   ssize_t read;
+  Professor p;
+  int i=0;
+  int escolas_pretendidadas[5];
 
-  file = fopen("entradaProj3TAG.txt", "r");
+  Professor professores[100];
+  regex habilitacao("d");
+
+  file = fopen("professores.txt", "r");
   if (file){
     while ((read = getline(&line, &len, file)) != -1) {
-      printf("Retrieved line of length %zu :\n", read);
-      printf("%s", line);
+      p.setNumeroProfessor(i+1);
+      if(i<9){
+        p.setNumeroHabilitacoes(line[5] - '0');
+        //printf("o: %i\n",line[5] - '0');
+      }else{
+        p.setNumeroHabilitacoes(line[6] - '0');
+      }
+      professores[i] = p;
+      i++;
+      //printf("%s", line)
+    }
+    setProfessores(professores);
+
+    Professor::professores[99].setNumeroHabilitacoes(3);
+    for(i=0;i<100;i++){
+      printf("Numero do Professor: %d\nHabilitaçoes: %d\n",Professor::professores[i].getNumeroProfessor(),Professor::professores[i].getNumeroHabilitacoes());
     }
   }
 }

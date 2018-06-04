@@ -1,6 +1,19 @@
 #ifndef ESCOLA_H
 #define ESCOLA_H
 
+#include <sstream>
+#include <string>
+#include <iostream>
+#include <fstream>
+#include <list>
+/**
+ * @brief Classe responsável por modelar a entidade Escola, contendo cada objeto
+ *        escola um numero de habilitações pretendidas, o número da escola e as vagas disponíveis
+ *
+ *
+ */
+
+ using namespace std;
 
 class Escola
 {
@@ -20,6 +33,21 @@ class Escola
       return vagas;
     }
 
+    void setNumeroEscola (int numero_escola){
+      this->numero_escola = numero_escola;
+    }
+
+    void setHabilitacoesPretendidas (int habilitacoes_pretendidas){
+      this->habilitacoes_pretendidas = habilitacoes_pretendidas;
+    }
+
+    void setVagas (int vagas){
+      this->vagas = vagas;
+    }
+
+    static void readEscolas (FILE * file);
+
+    static list<Escola> escolas;
   protected:
 
   private:
