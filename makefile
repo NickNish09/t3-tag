@@ -1,5 +1,5 @@
 CC = g++
-LIBS = -std=c++11 -Wall
+LIBS = -std=c++11
 BIN = bin
 INCLUDE = include
 OBJ = obj
