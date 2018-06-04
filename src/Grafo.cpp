@@ -43,6 +43,15 @@ void Grafo::makeAndPrintEmparelhamento(Professor professoress[100], Escola escol
               escolas[aux[j]].setCarro(professores[i].getNumeroProfessor());
               professores[i].setAlocado(true);
               professores[escolas[aux[j]].getCarro1()].setAlocado(false);
+            }else{
+              if(escolas[aux[j]].getCarro1() == 0){
+                int k=0;
+                while(professores[k].getAlocado()){
+                  k++;
+                }
+                escolas[aux[j]].setCarro(k);
+                professores[k].setAlocado(true);
+              }
             }
           }
         }
