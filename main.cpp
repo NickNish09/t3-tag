@@ -16,7 +16,7 @@
  * Teoria e Aplicação de Grafos - 1/2018                                *
  * Professor Díbio Borges                                               *
  * Alunos: Nicholas Nishimoto Marques - 150019343                       *
- *         Rafael Fernandes -                                           *
+ *         Rafael Fernandes - 140030395                                 *
  * Data: 04/06/2018                                                     *
  ***********************************************************************/
 
